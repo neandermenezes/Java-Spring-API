@@ -19,7 +19,7 @@ public class Episodio {
 
   public Episodio(Integer numero, Integer duracaoEmMinutos) {
     this.numero = numero;
-    this.duracaoEmMinutos = numero;
+    this.duracaoEmMinutos = duracaoEmMinutos;
   }
 
   public Episodio(Integer id, Integer numero, Integer duracaoEmMinutos, Serie serie) {

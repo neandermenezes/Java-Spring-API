@@ -14,16 +14,12 @@ public class Serie {
   private String nome;
 
   @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL, orphanRemoval = true)
-  private List<Episodio> episodios;
+  private List<Episodio> episodios = new ArrayList<Episodio>();;
 
-  public Serie() {
-
-  }
+  public Serie() {}
 
   public Serie(String nome) {
-    super();
     this.nome = nome;
-    this.episodios = new ArrayList<Episodio>();
   }
 
   public Integer getId() {
