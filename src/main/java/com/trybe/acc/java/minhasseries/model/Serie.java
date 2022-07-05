@@ -8,22 +8,22 @@ import java.util.List;
 public class Serie {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
-  private String name;
+  private String nome;
 
   @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<Episodio> episodios;
 
-  public Serie(String name) {
-
-    this.name = name;
-    this.episodios = new ArrayList<Episodio>();
-  }
-
   public Serie() {
 
+  }
+
+  public Serie(String nome) {
+    super();
+    this.nome = nome;
+    this.episodios = new ArrayList<Episodio>();
   }
 
   public Integer getId() {
@@ -35,11 +35,11 @@ public class Serie {
   }
 
   public String getNome() {
-    return name;
+    return nome;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 
   public List<Episodio> getEpisodios() {

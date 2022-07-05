@@ -11,7 +11,7 @@ import java.util.List;
 public class SerieService {
 
   @Autowired
-  private SerieRepository serieRepository;
+  SerieRepository serieRepository;
 
   public List<Serie> getSeries() {
     return serieRepository.findAll();
