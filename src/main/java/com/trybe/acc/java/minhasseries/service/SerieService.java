@@ -84,11 +84,6 @@ public class SerieService {
   public List<Episodio> getEpisodiosDaSerie(Integer id) {
     Serie serie = getSerieById(id);
 
-    System.out.print(serie.getEpisodios());
-    if (serie == null) {
-      throw new SerieNaoEncontradaException("Série não encontrada");
-    }
-    System.out.print(serie.getEpisodios());
     return serie.getEpisodios();
   }
 
