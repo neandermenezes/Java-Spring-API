@@ -1,8 +1,15 @@
 package com.trybe.acc.java.minhasseries.model;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.CascadeType;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Serie {
@@ -14,7 +21,7 @@ public class Serie {
   private String nome;
 
   @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL, orphanRemoval = true)
-  private List<Episodio> episodios = new ArrayList<Episodio>();;
+  private List<Episodio> episodios = new ArrayList<Episodio>();
 
   public Serie() {}
 

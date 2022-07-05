@@ -1,6 +1,11 @@
 package com.trybe.acc.java.minhasseries.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Episodio {
@@ -22,6 +27,9 @@ public class Episodio {
     this.duracaoEmMinutos = duracaoEmMinutos;
   }
 
+  /**
+   * Constructor.
+   */
   public Episodio(Integer id, Integer numero, Integer duracaoEmMinutos, Serie serie) {
     this.id = id;
     this.numero = numero;
